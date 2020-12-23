@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+/*======= ON IMPORTE LES CLASSES ============================*/
 import Number from './Number';
+import Symbol from './Symbol';
 /*=== CLASSE PRINCIPALE DU PROGRAMME ====*/
 class App extends React.Component {
     render(){
@@ -12,41 +14,12 @@ class App extends React.Component {
                         <div className="row ">
                             <div className="col-md-12 p-0">
                                 <div className="form-group">
-                                    <textarea className="form-control" rows="3" id="total" type="text" name="ans"></textarea>
+                                    <textarea className="form-control" rows="3" id="total" type="text" value="textarea"> </textarea>
                                 </div>
                             </div>
             </div>
                          <Number> </Number>
-                        <div className="row">
-                            <div className="col-xs-4">
-                            <button type="button" className="symbol">+</button>
-                            </div>
-                            <div className="col-xs-4">
-                            <button type="button" className="number">0</button>
-                            </div>
-                            <div className="col-xs-4">
-                            <button type="button" className="symbol">-</button>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-xs-4">
-                            <button type="button" className="symbol">/</button>
-                            </div>
-                            <div className="col-xs-4">
-                            <button type="button" className="symbol">*</button>
-                            </div>
-                            <div className="col-xs-4">
-                            <button type="button" className="symbol">⟵</button>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-xs-6 p-0">
-                            <button type="button" className="symbol">=</button>
-                            </div>
-                            <div className="col-xs-6 p-0">
-                            <button type="button" className="symbol">CE</button>
-                            </div>
-                        </div>
+                         <Symbol> </Symbol>
                         </form>
                     </div>
                     </div>

@@ -1,6 +1,10 @@
+/**
+ * Number : élément qui va représenter les chiffres 
+ * de la calculatrice 
+ */
 /*===  IMPORTS DE MODULES =====*/
 import React from 'react';
-
+import { Fragment } from 'react';
 
 /*===  CRÉATION DU COMPOSANT REACT NUMBER   =====*/
 
@@ -11,9 +15,9 @@ class Number extends React.Component {
         // this dans la fonction de rappel
         this.handleClickNumber = this.handleClickNumber.bind(this);
     }
-    // 
+    // fonction permettant
+    // de gérer le click sur le bouton 
     handleClickNumber(e){
-        ///console.log("click sur un number");
         console.log(e.target.value); 
     }
     render(){
@@ -24,17 +28,20 @@ class Number extends React.Component {
                 <div className="col-xs-4">
                     <button type="button" className="number"  value="1" onClick={this.handleClickNumber}>1</button>
                 </div>
-                    <div className="col-xs-4">
-                        <button type="button" className="number" value="2" onClick={this.handleClickNumber}>2</button>
-                    </div>
-                    <div className="col-xs-4">
-                        <button type="button" className="number" value="3" onClick={this.handleClickNumber}>3</button>
-                    </div>
+                <div className="col-xs-4">
+                    <button type="button" className="number" value="2" onClick={this.handleClickNumber}>2</button>
                 </div>
-                    <div className="row">
-       
-                        <div className="col-xs-4">
-                          <button type="button" className="number" value="4" onClick={this.handleClickNumber}>4</button>
+                <div className="col-xs-4">
+                    <button type="button" className="number" value="3" onClick={this.handleClickNumber}>3</button>
+                </div>
+                <div className="col-xs-4">
+                    <button type="button" className="number" value="0" onClick={this.handleClickNumber}>0</button>
+                </div>
+            </div>
+
+            <div className="row">
+                <div className="col-xs-4">
+                    <button type="button" className="number" value="4" onClick={this.handleClickNumber}>4</button>
                         </div>
                         <div className="col-xs-4">
                           <button type="button" className="number" value="5" onClick={this.handleClickNumber}>5</button>
