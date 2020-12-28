@@ -19,7 +19,7 @@ class Calc extends React.Component {
                              <TextArea onChange={this.handleChange}> </TextArea>
                          </div>
                          <Number onClick={this.handleClickNumber}> </Number>
-                         <Symbol> </Symbol>
+                         <Symbol onClick={this.handleSymbol}> </Symbol>
                     </form>
                 </div>
         </div>
