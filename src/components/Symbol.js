@@ -43,7 +43,7 @@ class Symbol extends React.Component {
                         </div>
                         <div className="row">
                             <div className="col-xs-6 p-0">
-                            <button type="button" className="symbol" onClick={this.handleSymbol value="="}>=</button>
+                            <button type="button" className="symbol" onClick={this.handleSymbol} value="=">=</button>
                             </div>
                             <div className="col-xs-6 p-0">
                             <button type="button" className="symbol" onClick={this.handleSymbol} value="CE">CE</button>
