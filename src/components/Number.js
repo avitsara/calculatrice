@@ -1,6 +1,6 @@
 /**
- * Number : élément qui va représenter les chiffres 
- * de la calculatrice 
+ * Number : élément qui va représenter les chiffres
+ * de la calculatrice
  */
 /*===  IMPORTS DE MODULES =====*/
 import React from 'react';
@@ -11,20 +11,38 @@ import { Fragment } from 'react';
 class Number extends React.Component {
     constructor(props){
         super(props);
-        /// liaison nécessaire afin de pouvoir utiliser 
+        /// liaison nécessaire afin de pouvoir utiliser
         // this dans la fonction de rappel
         this.handleClickNumber = this.handleClickNumber.bind(this);
     }
     // fonction permettant
-    // de gérer le click sur le bouton 
+    // de gérer le click sur le bouton
     handleClickNumber(e){
-        console.log(e.target.value); 
+        console.log(e.target.value);
     }
+    /*============  FONCTION PERMETTANT D'ADDTIONNER DES VALEURS  ===============*/
+    addOperation(){
+
+    }
+    /*============  FONCTION PERMETTANT DE FAIRE DES SOUSTRACTIONS  ===============*/
+    subOperation(){
+
+    }
+    /*============ FONCTION PERMETTANT DE FAIRE DES MULTIPLICATIONS ===============*/
+    mulOperation(){
+
+    }
+    /*============ FONCTION PERMETTANT DE FAIRE DES DIVISIONS ===============*/
+    divOperation(){
+
+    }
+    /*============      ===============*/
+
     render(){
         return (
-            <div>
+            <Fragment>
             <div className="row">
-                
+
                 <div className="col-xs-4">
                     <button type="button" className="number"  value="1" onClick={this.handleClickNumber}>1</button>
                 </div>
@@ -59,13 +77,13 @@ class Number extends React.Component {
                           </div>
                           <div className="col-xs-4">
                               <button type="button" value="9" className="number" onClick={this.handleClickNumber}>9</button>
-                          </div>                       
+                          </div>
                     </div>
-                </div>
+                </Fragment>
         )
     }
 }
-   
+
 
 /*=== EXPORTATION PAR DÉFAUT DE L'OBJET NUMBER ===*/
 export default Number

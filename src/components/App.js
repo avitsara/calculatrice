@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 /*======= ON IMPORTE LES CLASSES ============================*/
 import Number from './Number';
 import Symbol from './Symbol';
+import TextArea from './TextArea';
 /*=== CLASSE PRINCIPALE DU PROGRAMME ====*/
 class App extends React.Component {
     render(){
@@ -12,11 +13,8 @@ class App extends React.Component {
                 <div className="col-md-12 d-flex justify-content-center">
                     <form className="Cal">
                         <div className="row ">
-                            <div className="col-md-12 p-0">
-                                <div className="form-group">
-                                    <textarea className="form-control" rows="3" id="total" type="text" value="textarea"> </textarea>
-                                </div>
-                            </div>
+                         <TextArea> </TextArea>
+
             </div>
                          <Number> </Number>
                          <Symbol> </Symbol>
