@@ -16,9 +16,9 @@ class Calc extends React.Component {
               <div className="col-md-12 d-flex justify-content-center">
                    <form className="Cal">
                          <div className="row ">
-                             <TextArea> </TextArea>
+                             <TextArea onChange={this.handleChange}> </TextArea>
                          </div>
-                         <Number> </Number>
+                         <Number onClick={this.handleClickNumber}> </Number>
                          <Symbol> </Symbol>
                     </form>
                 </div>
