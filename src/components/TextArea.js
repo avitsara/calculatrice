@@ -6,7 +6,7 @@
 import React from 'react';
 import { Fragment } from 'react';
 import Number from './Number';
-import Symbol from './Symbol'; 
+import Symbol from './Symbol';
 
 
 class TextArea extends React.Component {
@@ -28,8 +28,9 @@ class TextArea extends React.Component {
                       <textarea className="form-control" rows="3" id="total" type="text" value={this.state.value}    onChange={this.handleChange}> </textarea>
                  </div>
            </div>
-     </Fragment>
 
+     </Fragment>
+  
      )
    }
 }
