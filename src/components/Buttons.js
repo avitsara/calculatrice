@@ -5,13 +5,13 @@ import { Fragment } from 'react';
 class Buttons extends React.Component {
     constructor(props){
       super(props);
+      /// On lie l'évènement handleClick à l'élément
       this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e) {
       console.log(e.target.value)
-
-      }
+    }
     render() {
       return (
         <Fragment>
