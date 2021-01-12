@@ -7,6 +7,11 @@ import TextArea from './TextArea';
 
 /*=== CLASSE PRINCIPALE DU PROGRAMME ====*/
 class App extends React.Component {
+    constructor(props){
+      super(props);
+    }
+
+
     render(){
         return(
            <Fragment>
