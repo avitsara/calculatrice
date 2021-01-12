@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Fragment } from 'react';
-/*======= ON IMPORTE LES CLASSES ============================*/
-import Calc from './Calc';
+/*============ IMPORTS D'ÉLÉMENTS REACT =============================================*/
+import Buttons from './Buttons';
+import TextArea from './TextArea';
 
 /*=== CLASSE PRINCIPALE DU PROGRAMME ====*/
 class App extends React.Component {
     render(){
         return(
            <Fragment>
-              <Calc>  </Calc>
+             <div className="row mt-5">
+                   <div className="col-md-12 d-flex justify-content-center">
+                      <form name="Cal">
+                          <TextArea>  </TextArea>
+                          <Buttons>   </Buttons>
+
+                     </form>
+                    </div>
+
+            </div>
+
+
            </Fragment>
-        )
+        );
     }
 }
 /*====  EXPORTATION PAR DÉFAUT ===*/
