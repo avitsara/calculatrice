@@ -1,20 +1,27 @@
 /*===  IMPORTS DE MODULES =====*/
 import React from 'react';
 import { Fragment } from 'react';
+import TextArea from './TextArea';
 
 class Buttons extends React.Component {
-    constructor(props){
-      super(props);
+    constructor(){
+      super();
       /// On lie l'évènement handleClick à l'élément
       this.handleClick = this.handleClick.bind(this);
+      this.state = {
+        result:""
+      }
     }
 
     handleClick(e) {
-      console.log(e.target.value)
+     
+      this.setState({ result : e.target.value})
+      console.log(this.state.result);
     }
     render() {
       return (
         <Fragment>
+          
           <div className="row">
             <div className="col-xs-4">
               <button type="button" onClick={this.handleClick} className="btn" value="1">1</button>

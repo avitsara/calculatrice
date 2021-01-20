@@ -1,18 +1,28 @@
 /*===  IMPORTS DE MODULES =====*/
 import React from 'react';
 import { Fragment } from 'react';
+import Buttons from './Buttons';
+
 
 class TextArea extends React.Component {
-    constructor(props){
-      super(props);
+    constructor(){
+      super();
+     
+    
+
+
     }
+   
     render() {
       return (
          <Fragment>
+         
             <div className="row ">
                <div className="col-md-12 p-0">
                  <div className="form-group">
-                   <textarea className="form-control" rows="10" id="total" type="text" name="ans" height="30px"></textarea>
+                   <textarea className="result" value="" onChange="" rows="10" id="total" type="text" name="ans" height="30px">
+
+                   </textarea>
                  </div>
 
                </div>

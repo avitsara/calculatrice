@@ -7,9 +7,14 @@ import TextArea from './TextArea';
 
 /*=== CLASSE PRINCIPALE DU PROGRAMME ====*/
 class App extends React.Component {
-    constructor(props){
-      super(props);
+    constructor(){
+      super();
+      
     }
+
+    
+
+    
 
 
     render(){
@@ -18,8 +23,8 @@ class App extends React.Component {
              <div className="row mt-5">
                    <div className="col-md-12 d-flex justify-content-center">
                       <form name="Cal">
-                          <TextArea>  </TextArea>
-                          <Buttons>   </Buttons>
+                          <TextArea> </TextArea>
+                          <Buttons onClick={this.handleClick}>   </Buttons>
 
                      </form>
                     </div>
