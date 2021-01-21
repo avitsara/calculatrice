@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 /*============ IMPORTS D'ÉLÉMENTS REACT =============================================*/
 import {Buttons} from './Buttons';
 import {TextArea} from './TextArea';
+import {ClearButton} from './ClearButton';
 
 /*=== CLASSE PRINCIPALE DU PROGRAMME ====*/
 class App extends React.Component {
@@ -13,7 +14,8 @@ class App extends React.Component {
         input:""
       }
     }
-
+    /// Fonction qui permet de mettre à jour le contenu
+    // de TextArea
     addToInput = val => {
       this.setState({input: this.state.input + val });
     }
@@ -70,7 +72,7 @@ class App extends React.Component {
                              <div className="col-xs-4">
                                  <Buttons handleClick={this.addToInput}>*</Buttons>
                                  <Buttons handleClick={this.addToInput}>/</Buttons>
-                                 <Buttons handleClick={this.addToInput}>CE</Buttons>
+                                   <ClearButton handleClear={() => this.setState({input:""})}> CE</ClearButton>
                              </div>
                        </div>
 
