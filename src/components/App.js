@@ -16,9 +16,17 @@ class App extends React.Component {
     }
     /// Fonction qui permet de mettre à jour le contenu
     // de TextArea
-    addToInput = val => {
+    updateInput = val => {
       this.setState({input: this.state.input + val });
+
     }
+/// Fonction permettant de faire des calculs
+    calculate = () => {
+      this.setState({input: eval(this.state.input)});
+      console.log(this.state.input);
+    }
+
+
 
     render(){
         return(
@@ -37,41 +45,41 @@ class App extends React.Component {
                        </div>
                           <div className="row">
                               <div className="col-xs-4">
-                                  <Buttons handleClick={this.addToInput}>1</Buttons>
-                                  <Buttons handleClick={this.addToInput}>2</Buttons>
-                                  <Buttons handleClick={this.addToInput}>3</Buttons>
+                                  <Buttons handleClick={this.updateInput}>1</Buttons>
+                                  <Buttons handleClick={this.updateInput}>2</Buttons>
+                                  <Buttons handleClick={this.updateInput}>3</Buttons>
                               </div>
                           </div>
 
                           <div className="row">
                               <div className="col-xs-4">
-                                  <Buttons handleClick={this.addToInput}>4</Buttons>
-                                  <Buttons handleClick={this.addToInput}>5</Buttons>
-                                  <Buttons handleClick={this.addToInput}>6</Buttons>
+                                  <Buttons handleClick={this.updateInput}>4</Buttons>
+                                  <Buttons handleClick={this.updateInput}>5</Buttons>
+                                  <Buttons handleClick={this.updateInput}>6</Buttons>
                               </div>
                           </div>
 
                           <div className="row">
                               <div className="col-xs-4">
-                                  <Buttons handleClick={this.addToInput}>7</Buttons>
-                                  <Buttons handleClick={this.addToInput}>8</Buttons>
-                                  <Buttons handleClick={this.addToInput}>9</Buttons>
+                                  <Buttons handleClick={this.updateInput}>7</Buttons>
+                                  <Buttons handleClick={this.updateInput}>8</Buttons>
+                                  <Buttons handleClick={this.updateInput}>9</Buttons>
                               </div>
                           </div>
 
 
                          <div className="row">
                               <div className="col-xs-4">
-                                  <Buttons handleClick={this.addToInput}>-</Buttons>
-                                  <Buttons handleClick={this.addToInput}>0</Buttons>
-                                  <Buttons handleClick={this.addToInput}>=</Buttons>
+                                  <Buttons handleClick={this.updateInput}>-</Buttons>
+                                  <Buttons handleClick={this.updateInput}>0</Buttons>
+                                  <Buttons handleClick={()=> this.calculate()}>=</Buttons>
                               </div>
                         </div>
 
                         <div className="row">
                              <div className="col-xs-4">
-                                 <Buttons handleClick={this.addToInput}>*</Buttons>
-                                 <Buttons handleClick={this.addToInput}>/</Buttons>
+                                 <Buttons handleClick={this.updateInput}>*</Buttons>
+                                 <Buttons handleClick={this.updateInput}>/</Buttons>
                                    <ClearButton handleClear={() => this.setState({input:""})}> CE</ClearButton>
                              </div>
                        </div>
@@ -79,9 +87,9 @@ class App extends React.Component {
 
                        <div className="row">
                             <div className="col-xs-4">
-                                <Buttons handleClick={this.addToInput}>+</Buttons>
-                                <Buttons handleClick={this.addToInput}>AC</Buttons>
-                                <Buttons  handleClick={this.addToInput}>%</Buttons>
+                                <Buttons handleClick={this.updateInput}>+</Buttons>
+                                <Buttons handleClick={this.updateInput}>AC</Buttons>
+                                <Buttons  handleClick={this.updateInput}>%</Buttons>
                             </div>
                       </div>
 
